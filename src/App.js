@@ -7,6 +7,7 @@ import Signin from "./pages/Auth/Signin";
 import Signup from "./pages/Auth/Signup";
 import Products from "./pages/Products";
 import ProductDetail from "./pages/ProductDetail";
+import Profile from "./pages/Profile";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
             <Route path="/product/:product_id" component={ProductDetail} />
             <Route path="/signin" component={Signin} />
             <Route path="/signup" component={Signup} />
+            <Route path="/profile" component={Profile} />
           </Switch>
         </div>
       </div>

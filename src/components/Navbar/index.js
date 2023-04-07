@@ -31,7 +31,7 @@ function Navbar() {
           </>
         )}
         {loggedIn && (
-          <Link to="/">
+          <Link to="/profile">
             <Button>Profile</Button>
           </Link>
         )}
