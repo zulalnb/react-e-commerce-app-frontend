@@ -8,7 +8,9 @@ import Signup from "./pages/Auth/Signup";
 import Products from "./pages/Products";
 import ProductDetail from "./pages/ProductDetail";
 import Profile from "./pages/Profile";
+import Basket from "./pages/Basket";
 import ProtectedRoute from "./pages/ProtectedRoute";
+import Error404 from "./pages/Error404";
 
 export default function App() {
   return (
@@ -23,13 +25,11 @@ export default function App() {
             <Route path="/signin" component={Signin} />
             <Route path="/signup" component={Signup} />
             <ProtectedRoute path="/profile" component={Profile} />
+            <Route path="/basket" component={Basket} />
+            <Route path="*" component={Error404} />
           </Switch>
         </div>
       </div>
     </Router>
   );
-}
-
-function Home() {
-  return <h2>Home</h2>;
 }

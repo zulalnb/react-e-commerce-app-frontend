@@ -35,7 +35,7 @@ function Products() {
         {data.pages.map((group, i) => (
           <React.Fragment key={i}>
             {group.map((item) => (
-              <Box w="100%" key={item.id}>
+              <Box w="100%" key={item._id}>
                 <Card item={item} />
               </Box>
             ))}
