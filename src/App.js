@@ -11,6 +11,7 @@ import Profile from "./pages/Profile";
 import Basket from "./pages/Basket";
 import ProtectedRoute from "./pages/ProtectedRoute";
 import Error404 from "./pages/Error404";
+import Admin from "./pages/Admin";
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
             <Route path="/signin" component={Signin} />
             <Route path="/signup" component={Signup} />
             <ProtectedRoute path="/profile" component={Profile} />
+            <ProtectedRoute path="/admin" component={Admin} admin={true} />
             <Route path="/basket" component={Basket} />
             <Route path="*" component={Error404} />
           </Switch>
