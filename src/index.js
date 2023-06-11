@@ -1,5 +1,5 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 import "./index.css";
 import "./reset.css";
 import "antd/dist/antd.css";
@@ -24,8 +24,12 @@ const queryClient = new QueryClient({
   },
 });
 
-ReactDOM.render(
-  <React.StrictMode>
+const container = document.getElementById("root");
+
+const root = createRoot(container);
+
+root.render(
+  <StrictMode>
     <QueryClientProvider client={queryClient}>
       <ChakraProvider>
         <AuthProvider>
@@ -37,6 +41,5 @@ ReactDOM.render(
 
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
-  </React.StrictMode>,
-  document.getElementById("root")
+  </StrictMode>
 );
