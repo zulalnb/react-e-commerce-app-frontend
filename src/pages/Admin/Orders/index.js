@@ -1,3 +1,5 @@
+import React from "react";
+import { useQuery } from "react-query";
 import {
   Table,
   TableCaption,
@@ -8,8 +10,6 @@ import {
   Thead,
   Tr,
 } from "@chakra-ui/react";
-import React from "react";
-import { useQuery } from "react-query";
 import { fetchOrders } from "../../../api";
 
 function Orders() {

@@ -1,8 +1,8 @@
-import { Box, Button, Text } from "@chakra-ui/react";
-import moment from "moment";
 import React from "react";
+import moment from "moment";
 import { useQuery } from "react-query";
 import { useParams } from "react-router-dom";
+import { Box, Button, Text } from "@chakra-ui/react";
 import ImageGallery from "react-image-gallery";
 import { fetchProduct } from "../../api";
 import { useBasket } from "../../contexts/BasketContext";
