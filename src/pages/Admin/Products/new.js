@@ -16,7 +16,7 @@ import { FieldArray, Formik } from "formik";
 import { postProduct } from "../../../api";
 import validationSchema from "./validations";
 
-function NewProuduct() {
+function NewProduct() {
   const queryClient = useQueryClient();
 
   const newProductMutation = useMutation(postProduct, {
@@ -168,4 +168,4 @@ function NewProuduct() {
   );
 }
 
-export default NewProuduct;
+export default NewProduct;
